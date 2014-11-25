@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rt_number: MyString
+  office_code: MyString
+  frb_number: MyString
+  record_type: MyString
+  change_date: MyString
+  new_routing: MyString
+  name: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  zipcode: MyString
+  zipcode_ext: MyString
+  tel_Area: MyString
+  tel_prefix_num: MyString
+  tel_suffix_num: MyString
+
+two:
+  rt_number: MyString
+  office_code: MyString
+  frb_number: MyString
+  record_type: MyString
+  change_date: MyString
+  new_routing: MyString
+  name: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  zipcode: MyString
+  zipcode_ext: MyString
+  tel_Area: MyString
+  tel_prefix_num: MyString
+  tel_suffix_num: MyString

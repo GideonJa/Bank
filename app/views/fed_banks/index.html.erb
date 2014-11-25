@@ -1,0 +1,53 @@
+<h1>Listing fed_banks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rt number</th>
+      <th>Office code</th>
+      <th>Frb number</th>
+      <th>Record type</th>
+      <th>Change date</th>
+      <th>New routing</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zipcode</th>
+      <th>Zipcode ext</th>
+      <th>Tel area</th>
+      <th>Tel prefix num</th>
+      <th>Tel suffix num</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fed_banks.each do |fed_bank| %>
+      <tr>
+        <td><%= fed_bank.rt_number %></td>
+        <td><%= fed_bank.office_code %></td>
+        <td><%= fed_bank.frb_number %></td>
+        <td><%= fed_bank.record_type %></td>
+        <td><%= fed_bank.change_date %></td>
+        <td><%= fed_bank.new_routing %></td>
+        <td><%= fed_bank.name %></td>
+        <td><%= fed_bank.address %></td>
+        <td><%= fed_bank.city %></td>
+        <td><%= fed_bank.state %></td>
+        <td><%= fed_bank.zipcode %></td>
+        <td><%= fed_bank.zipcode_ext %></td>
+        <td><%= fed_bank.tel_Area %></td>
+        <td><%= fed_bank.tel_prefix_num %></td>
+        <td><%= fed_bank.tel_suffix_num %></td>
+        <td><%= link_to 'Show', fed_bank %></td>
+        <td><%= link_to 'Edit', edit_fed_bank_path(fed_bank) %></td>
+        <td><%= link_to 'Destroy', fed_bank, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fed bank', new_fed_bank_path %>

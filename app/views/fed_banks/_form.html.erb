@@ -1,0 +1,22 @@
+<%= form_for(@fed_bank) do |f| %>
+  <% if @fed_bank.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fed_bank.errors.count, "error") %> prohibited this fed_bank from being saved:</h2>
+
+      <ul>
+      <% @fed_bank.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <h1> Enter new routing number </h1>
+  <div class="field">
+    <%= f.label :new_routing %><br>
+    <%= f.text_field :new_routing %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
