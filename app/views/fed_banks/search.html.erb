@@ -1,4 +1,8 @@
+<div class="header"> 
+   <h1> ACH information by routing number </h1>
+</div>
 <div class="home-search-box">
+  <p id="notice"><%= notice %></p>
   <%= form_tag search_result_path,  method: :get do  %>
     <div class="search-input">     
       <%= text_field_tag :rt_number, params[:rt_number], :placeholder => 'Enter routing mumber', :id => "search-field"%>

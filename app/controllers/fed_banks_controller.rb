@@ -15,7 +15,13 @@ class FedBanksController < ApplicationController
   def search_result
     @fed_bank = FedBank.find_by_rt_number(params[:rt_number])
     # raise @fed_bank.inspect
-    render :show
+    if @fed_bank
+      render :show
+    elsif params[:rt_number].present?
+      redirect_to root_path, notice: "No bank with routing #{params[:rt_number]} was found."
+    else
+      redirect_to root_path, notice: "Please enter a valid routing number."
+    end
   end
 
   
